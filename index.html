@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Namani Durga Srivas — Portfolio</title>
+  <meta name="description" content="Portfolio of Namani Durga Srivas — Full-Stack Developer skilled in Java, JavaScript, HTML, CSS. Explore my projects, skills, and achievements." />
+  <meta name="keywords" content="Namani Durga Srivas, Portfolio, Full-Stack Developer, Java, JavaScript, Web Developer" />
+  <meta name="author" content="Namani Durga Srivas" />
+
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80'>💻</text></svg>" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ===================== ANIMATED BACKGROUND ===================== -->
+  <div class="bg-animation">
+    <div class="orb"></div>
+    <div class="orb"></div>
+    <div class="orb"></div>
+    <div class="orb"></div>
+  </div>
+  <div class="particles" id="particles"></div>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">Srivas<span>.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="active"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="#resume"><i class="fas fa-graduation-cap"></i> Resume</a></li>
+        <li><a href="#skills"><i class="fas fa-cogs"></i> Skills</a></li>
+        <li><a href="#projects"><i class="fas fa-laptop-code"></i> Projects</a></li>
+        <li><a href="#certificates"><i class="fas fa-certificate"></i> Certificates</a></li>
+        <li><a href="#achievements"><i class="fas fa-star"></i> Achievements</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO SECTION ===================== -->
+  <section class="section hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="hero-greeting"><span class="wave">👋</span> Hello, I'm</p>
+          <h1 class="hero-name">Namani Durga<br/>Srivas</h1>
+          <div class="hero-typed">
+            <span id="typedText"></span><span class="typed-cursor">|</span>
+          </div>
+          <p class="hero-description">
+            A passionate full-stack developer who loves building beautiful, functional web applications. 
+            I specialize in Java, JavaScript, and modern web technologies.
+          </p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i> Get In Touch
+            </a>
+            <a href="#projects" class="btn btn-outline">
+              <i class="fas fa-code"></i> View Projects
+            </a>
+          </div>
+          <div class="hero-socials">
+            <a href="https://github.com/Durgasrivas" target="_blank" class="social-link" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/namani-durga-srivas-034893337" target="_blank" class="social-link" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:srivasnetha.147@gmail.com" class="social-link" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="hero-avatar-wrapper">
+            <div class="hero-avatar-ring"></div>
+            <div class="hero-avatar">
+              <img src="avatar.png" alt="Namani Durga Srivas" />
+            </div>
+            <div class="hero-float-dot"></div>
+            <div class="hero-float-dot"></div>
+            <div class="hero-float-dot"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT SECTION ===================== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge"><i class="fas fa-user"></i> About Me</div>
+        <h2 class="section-title">Get to Know <span>Me</span></h2>
+        <p class="section-subtitle">A quick overview of who I am and what I do</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-area reveal">
+          <div class="about-image-card">
+            <img src="avatar.png" alt="Namani Durga Srivas" />
+            <div class="about-stats">
+              <div class="about-stat">
+                <div class="stat-number" data-count="3">0</div>
+                <div class="stat-label">Projects</div>
+              </div>
+              <div class="about-stat">
+                <div class="stat-number" data-count="3">0</div>
+                <div class="stat-label">Certificates</div>
+              </div>
+              <div class="about-stat">
+                <div class="stat-number" data-count="7">0</div>
+                <div class="stat-label">Repositories</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-text reveal">
+          <h3>Full-Stack Developer &amp; Tech Enthusiast</h3>
+          <p>
+            I'm Namani Durga Srivas, a dedicated software developer with a strong foundation in 
+            full-stack web development. I enjoy creating dynamic, responsive web applications 
+            using modern technologies and best practices.
+          </p>
+          <p>
+            My journey in tech has been driven by curiosity and a desire to build impactful solutions. 
+            From banking applications to meal planners, I love tackling real-world problems with clean code 
+            and elegant design.
+          </p>
+          <div class="about-info-grid">
+            <div class="about-info-item">
+              <div class="info-icon"><i class="fas fa-user"></i></div>
+              <div>
+                <div class="info-label">Name</div>
+                <div class="info-value">Namani Durga Srivas</div>
+              </div>
+            </div>
+            <div class="about-info-item">
+              <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <div class="info-label">Location</div>
+                <div class="info-value">India</div>
+              </div>
+            </div>
+            <div class="about-info-item">
+              <div class="info-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <div class="info-label">Email</div>
+                <div class="info-value">srivasnetha.147@gmail.com</div>
+              </div>
+            </div>
+            <div class="about-info-item">
+              <div class="info-icon"><i class="fas fa-briefcase"></i></div>
+              <div>
+                <div class="info-label">Interests</div>
+                <div class="info-value">Web Development, Java</div>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i> Let's Connect
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RESUME SECTION ===================== -->
+  <section class="section" id="resume">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge"><i class="fas fa-graduation-cap"></i> Resume</div>
+        <h2 class="section-title">Education &amp; <span>Experience</span></h2>
+        <p class="section-subtitle">My academic journey and professional growth</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2023 – Present</span>
+            <h3>Bachelor's Degree in Computer Science / IT</h3>
+            <h4>University / College</h4>
+            <p>Pursuing my degree with a focus on software development, data structures, algorithms, and modern web technologies. Actively building projects and participating in coding challenges.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2024</span>
+            <h3>Full-Stack Web Development</h3>
+            <h4>CipherSchools</h4>
+            <p>Completed comprehensive training in full-stack web development covering HTML, CSS, JavaScript, React, Node.js, and database management through hands-on projects.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2024</span>
+            <h3>Java Backend Development</h3>
+            <h4>Coursera</h4>
+            <p>Completed a certified course in Java programming covering OOP concepts, Spring framework basics, servlets, and web application development.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2021 – 2023</span>
+            <h3>Higher Secondary Education</h3>
+            <h4>School</h4>
+            <p>Completed higher secondary schooling with strong performance in Mathematics and Computer Science, building the foundation for my career in technology.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS SECTION ===================== -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge"><i class="fas fa-cogs"></i> Skills</div>
+        <h2 class="section-title">Technical <span>Skills</span></h2>
+        <p class="section-subtitle">Technologies and tools I work with</p>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-category reveal">
+          <div class="skill-category-header">
+            <div class="skill-category-icon code"><i class="fas fa-code"></i></div>
+            <h3>Programming Languages</h3>
+          </div>
+          <div class="skill-list">
+            <span class="skill-tag"><i class="fas fa-copyright"></i> C</span>
+            <span class="skill-tag"><i class="fas fa-plus"></i> C++</span>
+            <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+            <span class="skill-tag"><i class="fab fa-java"></i> Java</span>
+            <span class="skill-tag"><i class="fab fa-html5"></i> HTML</span>
+            <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS</span>
+            <span class="skill-tag"><i class="fab fa-js-square"></i> JavaScript</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-1">
+          <div class="skill-category-header">
+            <div class="skill-category-icon tools"><i class="fas fa-wrench"></i></div>
+            <h3>Frameworks & Libraries</h3>
+          </div>
+          <div class="skill-list">
+            <span class="skill-tag"><i class="fas fa-table"></i> Pandas</span>
+            <span class="skill-tag"><i class="fas fa-brain"></i> Scikit-Learn</span>
+            <span class="skill-tag"><i class="fas fa-robot"></i> TensorFlow</span>
+            <span class="skill-tag"><i class="fab fa-css3-alt"></i> Tailwind CSS</span>
+            <span class="skill-tag"><i class="fab fa-react"></i> React</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-2">
+          <div class="skill-category-header">
+            <div class="skill-category-icon db"><i class="fas fa-tools"></i></div>
+            <h3>Tools</h3>
+          </div>
+          <div class="skill-list">
+            <span class="skill-tag"><i class="fab fa-github"></i> GitHub</span>
+            <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
+            <span class="skill-tag"><i class="fas fa-palette"></i> Canva</span>
+            <span class="skill-tag"><i class="fas fa-file-excel"></i> Excel</span>
+            <span class="skill-tag"><i class="fab fa-windows"></i> Windows</span>
+            <span class="skill-tag"><i class="fas fa-code"></i> VS Code</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-3">
+          <div class="skill-category-header">
+            <div class="skill-category-icon soft"><i class="fas fa-lightbulb"></i></div>
+            <h3>Soft Skills</h3>
+          </div>
+          <div class="skill-list">
+            <span class="skill-tag"><i class="fas fa-puzzle-piece"></i> Problem Solving</span>
+            <span class="skill-tag"><i class="fas fa-users"></i> Team Collaboration</span>
+            <span class="skill-tag"><i class="fas fa-clock"></i> Time Management</span>
+            <span class="skill-tag"><i class="fas fa-book-reader"></i> Quick Learner</span>
+            <span class="skill-tag"><i class="fas fa-comments"></i> Communication</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS SECTION ===================== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge"><i class="fas fa-laptop-code"></i> Projects</div>
+        <h2 class="section-title">Featured <span>Projects</span></h2>
+        <p class="section-subtitle">A showcase of my recent work and side projects</p>
+      </div>
+      <div class="projects-grid">
+
+        <!-- Project 1: Route Optimisation For E-commerce Delivery -->
+        <div class="project-card reveal">
+          <div class="project-image" style="background: linear-gradient(135deg, #0d1f2b, #1a3a4d); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+            <div class="project-widget-badge"><i class="fas fa-chart-line"></i> Data Science</div>
+            <div class="project-floating-icons">
+              <span class="floating-icon fi-1"><i class="fab fa-python"></i></span>
+              <span class="floating-icon fi-2"><i class="fas fa-database"></i></span>
+              <span class="floating-icon fi-3"><i class="fas fa-map-marked-alt"></i></span>
+            </div>
+            <div style="text-align:center; padding:20px; z-index: 2;">
+              <div class="project-icon-pulse">
+                <i class="fas fa-route" style="font-size:3rem; color: var(--accent-light);"></i>
+              </div>
+              <h3 style="color: var(--text-bright); font-family: 'Outfit', sans-serif; margin-top:10px;">Route Optimisation</h3>
+            </div>
+            <div class="project-shimmer"></div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/Durgasrivas/Route_Optimisation_For_E-commerce_Delivery" target="_blank" class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-status"><span class="status-dot green"></span> Completed</div>
+            <h3>Route Optimisation For E-commerce Delivery</h3>
+            <p>A data science project that optimizes delivery routes for e-commerce logistics using algorithmic approaches. Analyzes delivery data to find the most efficient paths, reducing costs and delivery time.</p>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Jupyter Notebook</span>
+              <span class="project-tag">Data Science</span>
+              <span class="project-tag">Algorithms</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Ace Bank Lite -->
+        <div class="project-card reveal reveal-delay-1">
+          <div class="project-image" style="background: linear-gradient(135deg, #1a1a3e, #2d1b69); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+            <div class="project-widget-badge" style="background: var(--primary-glow); color: var(--primary-light);"><i class="fas fa-code"></i> Full-Stack</div>
+            <div class="project-floating-icons">
+              <span class="floating-icon fi-1"><i class="fab fa-java"></i></span>
+              <span class="floating-icon fi-2"><i class="fas fa-shield-alt"></i></span>
+              <span class="floating-icon fi-3"><i class="fas fa-credit-card"></i></span>
+            </div>
+            <div style="text-align:center; padding:20px; z-index: 2;">
+              <div class="project-icon-pulse">
+                <i class="fas fa-university" style="font-size:3rem; color: var(--primary-light);"></i>
+              </div>
+              <h3 style="color: var(--text-bright); font-family: 'Outfit', sans-serif; margin-top:10px;">Ace Bank Lite</h3>
+            </div>
+            <div class="project-shimmer"></div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/Durgasrivas/ace-bank-lite" target="_blank" class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-status"><span class="status-dot green"></span> Completed</div>
+            <h3>Ace Bank Lite</h3>
+            <p>A full-featured banking web application built with Java Spring Boot, servlets, and JSP. Includes user authentication, account management, transaction processing, and a modern UI with animations.</p>
+            <div class="project-tags">
+              <span class="project-tag">Java</span>
+              <span class="project-tag">Spring Boot</span>
+              <span class="project-tag">JSP</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">MySQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Meal Planner -->
+        <div class="project-card reveal reveal-delay-2">
+          <div class="project-image" style="background: linear-gradient(135deg, #0d2b1a, #1a4d2e); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+            <div class="project-widget-badge" style="background: var(--warm-glow); color: var(--warm-light);"><i class="fas fa-paint-brush"></i> Frontend</div>
+            <div class="project-floating-icons">
+              <span class="floating-icon fi-1"><i class="fab fa-js-square"></i></span>
+              <span class="floating-icon fi-2"><i class="fab fa-html5"></i></span>
+              <span class="floating-icon fi-3"><i class="fab fa-css3-alt"></i></span>
+            </div>
+            <div style="text-align:center; padding:20px; z-index: 2;">
+              <div class="project-icon-pulse">
+                <i class="fas fa-utensils" style="font-size:3rem; color: var(--accent-light);"></i>
+              </div>
+              <h3 style="color: var(--text-bright); font-family: 'Outfit', sans-serif; margin-top:10px;">Meal Planner</h3>
+            </div>
+            <div class="project-shimmer"></div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/Durgasrivas/Meal-planner" target="_blank" class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-status"><span class="status-dot green"></span> Completed</div>
+            <h3>Meal Planner</h3>
+            <p>An interactive meal planning web application that helps users organize and plan their weekly meals with an intuitive, visually appealing interface. Built with modern JavaScript and responsive design.</p>
+            <div class="project-tags">
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CERTIFICATES SECTION ===================== -->
+  <section class="section" id="certificates">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge"><i class="fas fa-certificate"></i> Certificates</div>
+        <h2 class="section-title">My <span>Certifications</span></h2>
+        <p class="section-subtitle">Professional certifications that validate my expertise</p>
+      </div>
+      <div class="certificates-grid">
+
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fas fa-award"></i></div>
+          <h3>Full-Stack Web Development</h3>
+          <div class="cert-issuer">CipherSchools</div>
+          <p>Comprehensive certification covering front-end and back-end web development technologies including HTML, CSS, JavaScript, and modern frameworks.</p>
+          <a href="https://www.cipherschools.com/certificate/preview?id=68988f01cec61f8eee567800" target="_blank" class="cert-link">
+            View Certificate <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="cert-card reveal reveal-delay-1">
+          <div class="cert-icon" style="background: var(--accent-glow); color: var(--accent-light);"><i class="fas fa-medal"></i></div>
+          <h3>Java Programming</h3>
+          <div class="cert-issuer">Coursera</div>
+          <p>Certification validating expertise in Java programming, object-oriented design, data structures, and building robust applications.</p>
+          <a href="https://www.coursera.org/account/accomplishments/verify/7JB52RPELEV6" target="_blank" class="cert-link">
+            View Certificate <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="cert-card reveal reveal-delay-2">
+          <div class="cert-icon" style="background: var(--warm-glow); color: var(--warm-light);"><i class="fas fa-trophy"></i></div>
+          <h3>ChatGPT-4 Prompt Engineering</h3>
+          <div class="cert-issuer">Udemy</div>
+          <p>Comprehensive certification covering ChatGPT, Generative AI & Large Language Models (LLMs), including prompt engineering techniques, AI-driven workflows, and practical applications.</p>
+          <a href="https://drive.google.com/file/d/1fM5zIXi1KnrJgRZIIhEdpsZX49OexupF/view?usp=sharing" target="_blank" class="cert-link">
+            View Certificate <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ACHIEVEMENTS SECTION ===================== -->
+  <section class="section" id="achievements">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge"><i class="fas fa-star"></i> Achievements</div>
+        <h2 class="section-title">My <span>Achievements</span></h2>
+        <p class="section-subtitle">Milestones and accomplishments in my journey</p>
+      </div>
+      <div class="achievements-grid">
+
+        <div class="achievement-card reveal">
+          <div class="achievement-icon gold"><i class="fas fa-trophy"></i></div>
+          <h3>Webathon</h3>
+          <p>Participated and showcased competitive programming skills in Webathon and built a complete website in 1st year itself.</p>
+        </div>
+
+        <div class="achievement-card reveal reveal-delay-1">
+          <div class="achievement-icon purple"><i class="fas fa-code"></i></div>
+          <h3>Competitive Programming</h3>
+          <p>Solved 100+ coding questions on platforms like HackerRank and CodeChef, strengthening problem-solving and algorithmic thinking.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT SECTION ===================== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge"><i class="fas fa-envelope"></i> Contact</div>
+        <h2 class="section-title">Get In <span>Touch</span></h2>
+        <p class="section-subtitle">Have a question or want to work together? Let's connect!</p>
+      </div>
+      <div class="contact-grid">
+
+        <div class="contact-info reveal">
+          <h3>Let's Talk</h3>
+          <p>I'm always open to new opportunities, collaborations, and interesting conversations. Feel free to reach out!</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-item-text">
+                <div class="label">Email</div>
+                <div class="value">srivasnetha.147@gmail.com</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon" style="background: var(--accent-glow); color: var(--accent-light);"><i class="fab fa-github"></i></div>
+              <div class="contact-item-text">
+                <div class="label">GitHub</div>
+                <div class="value"><a href="https://github.com/Durgasrivas" target="_blank">github.com/Durgasrivas</a></div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon" style="background: var(--warm-glow); color: var(--warm-light);"><i class="fab fa-linkedin-in"></i></div>
+              <div class="contact-item-text">
+                <div class="label">LinkedIn</div>
+                <div class="value"><a href="https://www.linkedin.com/in/namani-durga-srivas-034893337" target="_blank">Namani Durga Srivas</a></div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon" style="background: var(--gold-glow); color: var(--gold);"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-item-text">
+                <div class="label">Location</div>
+                <div class="value">India</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-card reveal reveal-delay-1">
+          <h3>Send a Message</h3>
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" placeholder="john@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" placeholder="What's this about?" />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" placeholder="Tell me about your project or idea..." required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">Srivas<span>.</span></div>
+        <div class="footer-links">
+          <a href="#about"><i class="fas fa-user"></i> About</a>
+          <a href="#projects"><i class="fas fa-laptop-code"></i> Projects</a>
+          <a href="#skills"><i class="fas fa-cogs"></i> Skills</a>
+          <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+        </div>
+        <div class="footer-socials">
+          <a href="https://github.com/Durgasrivas" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/namani-durga-srivas-034893337" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:srivasnetha.147@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Namani Durga Srivas. All rights reserved. Built with ❤️
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
