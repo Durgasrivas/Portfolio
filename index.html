@@ -31,7 +31,7 @@
   <!-- ===================== NAVIGATION ===================== -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="#hero" class="nav-logo">Srivas<span>.</span></a>
+      <a href="#hero" class="nav-logo">NDS<span>.</span></a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#hero" class="active"><i class="fas fa-home"></i> Home</a></li>
         <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
@@ -64,13 +64,13 @@
             A passionate full-stack developer who loves building beautiful, functional web applications. 
             I specialize in Java, JavaScript, and modern web technologies.
           </p>
-          <div class="hero-buttons">
-            <a href="#contact" class="btn btn-primary">
-              <i class="fas fa-paper-plane"></i> Get In Touch
+          <div class="hero-buttons" style="display: flex; gap: 15px; margin-bottom: 25px; flex-wrap: wrap;">
+            <a href="#contact" class="btn btn-primary" style="padding: 12px 30px; border-radius: 30px; font-weight: 600; font-size: 1rem;">
+              Contact Me
             </a>
-            <a href="#projects" class="btn btn-outline">
-              <i class="fas fa-code"></i> View Projects
-            </a>
+            <button id="btnViewResume" class="btn btn-outline" style="padding: 12px 30px; border-radius: 30px; font-weight: 500; font-size: 1rem; display: flex; align-items: center; gap: 10px; cursor: pointer;">
+              View Resume <i class="fas fa-arrow-right" style="font-size: 0.9rem;"></i>
+            </button>
           </div>
           <div class="hero-socials">
             <a href="https://github.com/Durgasrivas" target="_blank" class="social-link" aria-label="GitHub">
@@ -422,47 +422,110 @@
       </div>
       <div class="certificates-grid">
 
+        <!-- Certificate 1 -->
         <div class="cert-card reveal">
-          <div class="cert-img">
-            <img src="certificates/cipherschools.png" alt="Full-Stack Web Development Certificate" />
+          <div class="cert-img-wrapper">
+            <div class="cert-badge"><i class="fas fa-ribbon"></i></div>
+            <div class="cert-img">
+              <img src="certificates/chatgpt4.png" alt="ChatGPT-4 Prompt Engineering Certificate" />
+              <div class="cert-overlay">
+                <div class="btn-preview"><i class="fas fa-expand-arrows-alt"></i> Preview Image</div>
+              </div>
+            </div>
           </div>
           <div class="cert-content">
-            <div class="cert-icon"><i class="fas fa-award"></i></div>
-            <h3>Full-Stack Web Development</h3>
-            <div class="cert-issuer">CipherSchools</div>
-            <p>Comprehensive certification covering front-end and back-end web development technologies including HTML, CSS, JavaScript, and modern frameworks.</p>
-            <a href="https://www.cipherschools.com/certificate/preview?id=68988f01cec61f8eee567800" target="_blank" class="cert-link">
-              View Certificate <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="cert-card reveal reveal-delay-1">
-          <div class="cert-img">
-            <img src="certificates/coursera.png" alt="Java Programming Certificate" />
-          </div>
-          <div class="cert-content">
-            <div class="cert-icon" style="background: var(--accent-glow); color: var(--accent-light);"><i class="fas fa-medal"></i></div>
-            <h3>Java Programming</h3>
-            <div class="cert-issuer">Coursera</div>
-            <p>Certification validating expertise in Java programming, object-oriented design, data structures, and building robust applications.</p>
-            <a href="https://www.coursera.org/account/accomplishments/verify/7JB52RPELEV6" target="_blank" class="cert-link">
-              View Certificate <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="cert-card reveal reveal-delay-2">
-          <div class="cert-img">
-            <img src="certificates/udemy.png" alt="ChatGPT-4 Prompt Engineering Certificate" />
-          </div>
-          <div class="cert-content">
-            <div class="cert-icon" style="background: var(--warm-glow); color: var(--warm-light);"><i class="fas fa-trophy"></i></div>
             <h3>ChatGPT-4 Prompt Engineering</h3>
-            <div class="cert-issuer">Udemy</div>
-            <p>Comprehensive certification covering ChatGPT, Generative AI & Large Language Models (LLMs), including prompt engineering techniques, AI-driven workflows, and practical applications.</p>
-            <a href="https://drive.google.com/file/d/1fM5zIXi1KnrJgRZIIhEdpsZX49OexupF/view?usp=sharing" target="_blank" class="cert-link">
-              View Certificate <i class="fas fa-arrow-right"></i>
+            <div class="cert-meta">
+              <div class="cert-meta-item">
+                <i class="fas fa-building"></i> Infosys
+              </div>
+              <div class="cert-meta-item">
+                <i class="far fa-calendar-alt"></i> Aug 2025
+              </div>
+            </div>
+            <a href="https://drive.google.com/file/d/1fM5zIXi1KnrJgRZIIhEdpsZX49OexupF/view" target="_blank" class="cert-link-btn">
+              View Certificate <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Certificate 2 -->
+        <div class="cert-card reveal reveal-delay-1">
+          <div class="cert-img-wrapper">
+            <div class="cert-badge"><i class="fas fa-ribbon"></i></div>
+            <div class="cert-img">
+              <img src="certificates/computational_theory.png" alt="Computational Theory Certificate" />
+              <div class="cert-overlay">
+                <div class="btn-preview"><i class="fas fa-expand-arrows-alt"></i> Preview Image</div>
+              </div>
+            </div>
+          </div>
+          <div class="cert-content">
+            <h3>Computational Theory Language Principle & Finite Automata</h3>
+            <div class="cert-meta">
+              <div class="cert-meta-item">
+                <i class="fas fa-building"></i> Infosys
+              </div>
+              <div class="cert-meta-item">
+                <i class="far fa-calendar-alt"></i> Aug 2025
+              </div>
+            </div>
+            <a href="https://drive.google.com/file/d/1idXbeJkdIL2QCAS77Rbzbq-n0v_qXz-P/view" target="_blank" class="cert-link-btn">
+              View Certificate <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Certificate 3 -->
+        <div class="cert-card reveal reveal-delay-2">
+          <div class="cert-img-wrapper">
+            <div class="cert-badge"><i class="fas fa-ribbon"></i></div>
+            <div class="cert-img">
+              <img src="certificates/data_structures.png" alt="Data Structure and Algorithm Certificate" />
+              <div class="cert-overlay">
+                <div class="btn-preview"><i class="fas fa-expand-arrows-alt"></i> Preview Image</div>
+              </div>
+            </div>
+          </div>
+          <div class="cert-content">
+            <h3>Training in Data Structure and Algorithm</h3>
+            <div class="cert-meta">
+              <div class="cert-meta-item">
+                <i class="fas fa-building"></i> CipherSchools
+              </div>
+              <div class="cert-meta-item">
+                <i class="far fa-calendar-alt"></i> Jul 2025
+              </div>
+            </div>
+            <a href="https://www.cipherschools.com/certificate/preview?id=68988f01cec61f8eee567800" target="_blank" class="cert-link-btn">
+              View Certificate <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Certificate 4 -->
+        <div class="cert-card reveal">
+          <div class="cert-img-wrapper">
+            <div class="cert-badge"><i class="fas fa-ribbon"></i></div>
+            <div class="cert-img">
+              <img src="certificates/c_for_everyone.png" alt="C For Everyone Certificate" />
+              <div class="cert-overlay">
+                <div class="btn-preview"><i class="fas fa-expand-arrows-alt"></i> Preview Image</div>
+              </div>
+            </div>
+          </div>
+          <div class="cert-content">
+            <h3>C For Everyone-Programming Fundamentals</h3>
+            <div class="cert-meta">
+              <div class="cert-meta-item">
+                <i class="fas fa-building"></i> Coursera
+              </div>
+              <div class="cert-meta-item">
+                <i class="far fa-calendar-alt"></i> 2024
+              </div>
+            </div>
+            <a href="https://www.coursera.org/account/accomplishments/verify/7JB52RPELEV6?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" target="_blank" class="cert-link-btn">
+              View Certificate <i class="fas fa-external-link-alt"></i>
             </a>
           </div>
         </div>
@@ -577,7 +640,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <div class="footer-logo">Srivas<span>.</span></div>
+        <div class="footer-logo">NDS<span>.</span></div>
         <div class="footer-links">
           <a href="#about"><i class="fas fa-user"></i> About</a>
           <a href="#projects"><i class="fas fa-laptop-code"></i> Projects</a>
@@ -595,6 +658,25 @@
       </div>
     </div>
   </footer>
+
+  <!-- Resume Preview Modal -->
+  <div class="image-modal" id="resumeModal">
+    <div style="position: absolute; top: 0; left: 0; width: 100%; padding: 20px; display: flex; justify-content: space-between; align-items: center; background: rgba(4, 9, 20, 0.9); z-index: 10001; box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
+      <a href="Srivas_Resume.pdf" download="Namani_Durga_Srivas_Resume.pdf" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.9rem;">
+        <i class="fas fa-download"></i> Download Resume
+      </a>
+      <span class="modal-close" id="resumeModalClose" style="position: relative; top: 0; right: 0; font-size: 2rem;"><i class="fas fa-times"></i></span>
+    </div>
+    <div style="width: 90%; height: 80%; margin-top: 60px; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+      <iframe src="Srivas_Resume.pdf" width="100%" height="100%" style="border: none; background: #fff;" title="Resume PDF"></iframe>
+    </div>
+  </div>
+
+  <!-- Image Preview Modal -->
+  <div class="image-modal" id="imageModal">
+    <span class="modal-close" id="modalClose"><i class="fas fa-times"></i></span>
+    <img class="modal-content" id="modalImg" src="">
+  </div>
 
   <!-- Back to Top -->
   <button class="back-to-top" id="backToTop" aria-label="Back to top">

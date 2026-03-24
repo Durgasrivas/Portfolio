@@ -213,4 +213,77 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ========== IMAGE MODAL (LIGHTBOX) ==========
+  const imageModal = document.getElementById('imageModal');
+  const modalImg = document.getElementById('modalImg');
+  const modalClose = document.getElementById('modalClose');
+  const previewBtns = document.querySelectorAll('.cert-card .btn-preview');
+
+  if (imageModal && modalImg && modalClose) {
+    previewBtns.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const wrapper = this.closest('.cert-img-wrapper');
+        const img = wrapper.querySelector('img');
+        if (img) {
+          modalImg.src = img.src;
+          imageModal.classList.add('show');
+          document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+      });
+    });
+
+    const closeModal = () => {
+      imageModal.classList.remove('show');
+      document.body.style.overflow = '';
+      setTimeout(() => { modalImg.src = ''; }, 300); // Clear after transition
+    };
+
+    modalClose.addEventListener('click', closeModal);
+
+    imageModal.addEventListener('click', (e) => {
+      if (e.target === imageModal) {
+        closeModal();
+      }
+    });
+    
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && imageModal.classList.contains('show')) {
+        closeModal();
+      }
+    });
+  }
+
+  // ========== RESUME MODAL ==========
+  const btnViewResume = document.getElementById('btnViewResume');
+  const resumeModal = document.getElementById('resumeModal');
+  const resumeModalClose = document.getElementById('resumeModalClose');
+
+  if (btnViewResume && resumeModal && resumeModalClose) {
+    btnViewResume.addEventListener('click', (e) => {
+      e.preventDefault();
+      resumeModal.classList.add('show');
+      document.body.style.overflow = 'hidden';
+    });
+
+    const closeResumeModal = () => {
+      resumeModal.classList.remove('show');
+      document.body.style.overflow = '';
+    };
+
+    resumeModalClose.addEventListener('click', closeResumeModal);
+
+    resumeModal.addEventListener('click', (e) => {
+      if (e.target === resumeModal) {
+        closeResumeModal();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && resumeModal.classList.contains('show')) {
+        closeResumeModal();
+      }
+    });
+  }
+
 });

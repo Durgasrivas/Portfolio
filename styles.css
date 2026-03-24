@@ -1332,7 +1332,7 @@ img {
 }
 
 .cert-card {
-  padding: 28px;
+  padding: 0;
   border-radius: 20px;
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -1340,6 +1340,8 @@ img {
   transition: all var(--transition-smooth);
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .cert-card::before {
@@ -1358,44 +1360,106 @@ img {
   box-shadow: var(--shadow-glow);
 }
 
-.cert-img {
+.cert-img-wrapper {
+  position: relative;
   width: 100%;
-  aspect-ratio: 1/1;
-  overflow: hidden;
+  aspect-ratio: 16/11;
   background: var(--bg-tertiary);
   display: flex;
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.cert-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  background: rgba(10, 15, 30, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-light);
+  font-size: 0.9rem;
+  z-index: 5;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  backdrop-filter: blur(4px);
+}
+
+.cert-img {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .cert-img img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  padding: 10px;
+  padding: 12px;
   transition: transform var(--transition-smooth);
 }
 
 .cert-card:hover .cert-img img {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
-.cert-content {
-  padding: 24px 28px 32px;
-}
-
-.cert-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 14px;
+.cert-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(4, 9, 20, 0.75);
+  backdrop-filter: blur(3px);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--primary-glow);
-  color: var(--primary-light);
-  font-size: 1.4rem;
-  margin-bottom: 16px;
+  opacity: 0;
+  transition: all var(--transition-smooth);
+  z-index: 10;
+}
+
+.cert-card:hover .cert-overlay {
+  opacity: 1;
+}
+
+.btn-preview {
+  padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transform: translateY(15px);
+  transition: all var(--transition-smooth);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.cert-card:hover .btn-preview {
+  transform: translateY(0);
+}
+
+.btn-preview:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+}
+
+.cert-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .cert-card h3 {
@@ -1403,35 +1467,53 @@ img {
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--text-bright);
-  margin-bottom: 6px;
+  margin-bottom: 20px;
+  line-height: 1.4;
 }
 
-.cert-card .cert-issuer {
-  font-size: 0.85rem;
-  color: var(--primary-light);
-  font-weight: 500;
-  margin-bottom: 10px;
+.cert-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+  flex-grow: 1;
 }
 
-.cert-card p {
+.cert-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 0.85rem;
   color: var(--text-secondary);
-  margin-bottom: 16px;
 }
 
-.cert-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.85rem;
-  font-weight: 600;
+.cert-meta-item i {
   color: var(--primary-light);
-  transition: all var(--transition-fast);
+  width: 16px;
+  text-align: center;
 }
 
-.cert-link:hover {
-  color: var(--accent);
-  gap: 10px;
+.cert-link-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  color: var(--text-bright);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  margin-top: auto;
+}
+
+.cert-link-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
 }
 
 /* ---------- Achievements Section ---------- */
@@ -1927,4 +2009,56 @@ img {
   .about-stats {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+/* ========== IMAGE MODAL (LIGHTBOX) ========== */
+.image-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(4, 9, 20, 0.95);
+  backdrop-filter: blur(8px);
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition-smooth);
+}
+
+.image-modal.show {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  transform: scale(0.8);
+  transition: transform var(--transition-smooth);
+  object-fit: contain;
+}
+
+.image-modal.show .modal-content {
+  transform: scale(1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+  z-index: 10000;
+}
+
+.modal-close:hover {
+  color: var(--accent);
 }
