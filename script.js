@@ -5,6 +5,18 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ========== PRELOADER ==========
+  window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+      preloader.classList.add('loaded');
+      // Optional: remove it from DOM after transition
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 500);
+    }
+  });
+
   // ========== PARTICLES ==========
   const particlesContainer = document.getElementById('particles');
   const PARTICLE_COUNT = 30;
