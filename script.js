@@ -9,11 +9,16 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     const preloader = document.getElementById('preloader');
     if (preloader) {
-      preloader.classList.add('loaded');
-      // Optional: remove it from DOM after transition
+      const elapsedTime = performance.now();
+      const delay = Math.max(0, 2000 - elapsedTime);
+      
       setTimeout(() => {
-        preloader.style.display = 'none';
-      }, 500);
+        preloader.classList.add('loaded');
+        // Optional: remove it from DOM after transition
+        setTimeout(() => {
+          preloader.style.display = 'none';
+        }, 500);
+      }, delay);
     }
   });
 
