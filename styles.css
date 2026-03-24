@@ -927,11 +927,134 @@ img {
   font-size: 1rem;
 }
 
+/* ---------- Deshik-Style Skills (Icon Cards) ---------- */
+.deshik-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.ds-category-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-light);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ds-bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.ds-bullet.cyan { background: var(--accent); box-shadow: 0 0 8px var(--accent-glow); }
+.ds-bullet.magenta { background: #ff00ff; box-shadow: 0 0 8px rgba(255, 0, 255, 0.4); }
+.ds-bullet.gold { background: var(--gold); box-shadow: 0 0 8px var(--gold-glow); }
+.ds-bullet.warm { background: var(--warm); box-shadow: 0 0 8px var(--warm-glow); }
+
+.ds-cards-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.ds-card {
+  width: 85px;
+  height: 85px;
+  border-radius: 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: default;
+  transition: all var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.ds-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(108, 99, 255, 0.05), rgba(0, 212, 170, 0.05));
+  opacity: 0;
+  transition: opacity var(--transition-smooth);
+}
+
+.ds-card:hover::before {
+  opacity: 1;
+}
+
+.ds-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(108, 99, 255, 0.15);
+}
+
+.ds-card i {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.ds-card:hover i {
+  color: var(--primary-light);
+}
+
+.ds-card span {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-align: center;
+  transition: color var(--transition-fast);
+}
+
+.ds-card:hover span {
+  color: var(--text-bright);
+}
+
+/* Responsive Deshik Skills */
+@media (max-width: 600px) {
+  .ds-card {
+    width: 75px;
+    height: 75px;
+  }
+  .ds-card i {
+    font-size: 1.3rem;
+  }
+}
+
 /* ---------- Projects Section ---------- */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 28px;
+}
+
+.cert-card {
+  border-radius: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  padding: 0; /* Removed padding */
 }
 
 .project-card {
@@ -1235,9 +1358,36 @@ img {
   box-shadow: var(--shadow-glow);
 }
 
+.cert-img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  background: var(--bg-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.cert-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 10px;
+  transition: transform var(--transition-smooth);
+}
+
+.cert-card:hover .cert-img img {
+  transform: scale(1.05);
+}
+
+.cert-content {
+  padding: 24px 28px 32px;
+}
+
 .cert-icon {
-  width: 50px;
-  height: 50px;
+  width: 44px;
+  height: 44px;
   border-radius: 14px;
   display: flex;
   align-items: center;
